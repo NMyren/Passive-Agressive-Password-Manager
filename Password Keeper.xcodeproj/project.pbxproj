@@ -13,6 +13,7 @@
 		3FA79E641AE6B66200EC36DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E631AE6B66200EC36DF /* Images.xcassets */; };
 		3FA79E671AE6B66200EC36DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */; };
 		3FA79E731AE6B66200EC36DF /* Password_KeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E721AE6B66200EC36DF /* Password_KeeperTests.swift */; };
+		3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		3FA79E6C1AE6B66200EC36DF /* Password KeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Password KeeperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA79E711AE6B66200EC36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA79E721AE6B66200EC36DF /* Password_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_KeeperTests.swift; sourceTree = "<group>"; };
+		3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */,
 				3FA79E5E1AE6B66200EC36DF /* ViewController.swift */,
+				3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */,
 				3FA79E601AE6B66200EC36DF /* Main.storyboard */,
 				3FA79E631AE6B66200EC36DF /* Images.xcassets */,
 				3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */,
 				3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */,
 				3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				3FA79E781AE6B66200EC36DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FA79E791AE6B66200EC36DF /* Build configuration list for PBXNativeTarget "Password KeeperTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				3FA79E7B1AE6B66200EC36DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
