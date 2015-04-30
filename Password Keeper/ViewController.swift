@@ -54,6 +54,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var dvc = segue.destinationViewController as DetailViewController
+        
+        var index = tableView.indexPathForSelectedRow()?.row
+        
+        dvc.website = websites[index!]
+        
+    }
+
+    
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete
         {

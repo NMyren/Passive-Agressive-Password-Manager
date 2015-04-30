@@ -8,28 +8,55 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
-    override func viewDidLoad() {
+class DetailViewController: UIViewController
+{
+    var website = [String]()
+    
+    @IBOutlet var websiteLabel: UILabel!
+    
+    @IBOutlet var usernameLabel: UILabel!
+    
+    @IBOutlet var passwordLabel: UILabel!
+    
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        var nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.orangeColor()
+        super.view.backgroundColor = UIColor.grayColor()
+        websiteLabel.textColor = UIColor.orangeColor()
+        usernameLabel.textColor = UIColor.orangeColor()
+        passwordLabel.textColor = UIColor.orangeColor()
+        websiteLabel.text = website[0]
+        if website.count > 1
+        {
+            usernameLabel.text = website[1]
+        }
+        else
+        {
+            usernameLabel.text = "No Username"
+        }
+        if website.count > 2
+        {
+            passwordLabel.text = website[2]
+        }
+        else
+        {
+            passwordLabel.text = "No Password"
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        
     }
-    */
-
+    
+    
+    
 }

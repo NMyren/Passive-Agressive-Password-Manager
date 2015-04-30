@@ -52,6 +52,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tiD-XG-k8t" kind="show" id="9U4-cH-D3S"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -82,6 +85,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951.5" y="-387.5"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="IpW-up-IZU">
+            <objects>
+                <viewController id="tiD-XG-k8t" customClass="DetailViewController" customModule="Password_Keeper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0QI-d5-8p4"/>
+                        <viewControllerLayoutGuide type="bottom" id="cSn-WK-RMK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cui-Wk-yBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehr-x3-1yK">
+                                <rect key="frame" x="185" y="158" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBu-gI-JSy">
+                                <rect key="frame" x="185" y="218" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZD-2b-qwe">
+                                <rect key="frame" x="185" y="269" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ehr-x3-1yK" secondAttribute="centerX" id="Hy6-rA-uxY"/>
+                            <constraint firstAttribute="centerX" secondItem="gBu-gI-JSy" secondAttribute="centerX" id="J5L-gf-hAD"/>
+                            <constraint firstAttribute="centerX" secondItem="lZD-2b-qwe" secondAttribute="centerX" id="WTW-1A-fgR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="passwordLabel" destination="lZD-2b-qwe" id="APt-NE-hqn"/>
+                        <outlet property="usernameLabel" destination="gBu-gI-JSy" id="Ar6-LP-QNW"/>
+                        <outlet property="websiteLabel" destination="ehr-x3-1yK" id="mG0-AN-6zh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gg7-d2-y9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.5" y="-387.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="46f-nb-nW4">
