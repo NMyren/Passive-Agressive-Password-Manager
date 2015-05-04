@@ -21,10 +21,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad()
     {
         
+        
         var nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.orangeColor()
         super.viewDidLoad()
+        
+
+        self.performSegueWithIdentifier("login", sender: self)
+        
+
+        
         tableView.separatorColor = UIColor.blackColor()
         tableView.backgroundColor = UIColor.grayColor()
         editButton.tag = 0
@@ -55,11 +62,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+
+        if segue.identifier != "login"
+        {
         var dvc = segue.destinationViewController as DetailViewController
         
         var index = tableView.indexPathForSelectedRow()?.row
         
         dvc.website = websites[index!]
+        }
+        
         
     }
 
@@ -127,8 +140,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBAction func addButton(sender: AnyObject)
     {
+        
+        
+        
         var alert = UIAlertController(title: "Add Website", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.view.tintColor = UIColor.orangeColor()
+        alert.view.tintColor = UIColor.grayColor()
         alert.addTextFieldWithConfigurationHandler
             {
                 (textField) -> Void in textField.placeholder = "Website"
@@ -168,6 +184,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             toFile: dataFilePath!)
         
     }
+    
+   
+
  
 
 }

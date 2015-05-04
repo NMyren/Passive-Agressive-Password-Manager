@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D533C1AF3E0D600437053 /* LoginViewController.swift */; };
 		3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */; };
 		3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5E1AE6B66200EC36DF /* ViewController.swift */; };
 		3FA79E621AE6B66200EC36DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E601AE6B66200EC36DF /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2D533C1AF3E0D600437053 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FA79E571AE6B66200EC36DF /* Password Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA79E5B1AE6B66200EC36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */,
 				3FA79E5E1AE6B66200EC36DF /* ViewController.swift */,
+				3F2D533C1AF3E0D600437053 /* LoginViewController.swift */,
 				3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */,
 				3FA79E601AE6B66200EC36DF /* Main.storyboard */,
 				3FA79E631AE6B66200EC36DF /* Images.xcassets */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */,
 				3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */,
 				3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */,
 				3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */,
