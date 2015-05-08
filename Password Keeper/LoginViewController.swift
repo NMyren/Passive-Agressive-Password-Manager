@@ -8,15 +8,44 @@
 
 import UIKit
 
-class LoginViewController: UIViewController
+class LoginViewController: UIViewController, passDataBack
 {
-    var username: String?
-    var password: String?
+    var username: String!
+    var password: String!
+    var newUsername : String!
+    var newPassword : String!
     
+    @IBOutlet var passTextField: UITextField!
+    @IBOutlet var userTextField: UITextField!
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        println(newUsername)
+       
+        
+    }
     @IBAction func Login(sender: AnyObject)
     {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var secondVC = (segue.destinationViewController as RegisterViewController)
+        secondVC.delegate = self
+        
+    }
+    
+    func writeBack(name: String, pass: String)
+    {
+        newUsername = name
+        newPassword = pass
+        println(newUsername)
+    }
+   
+}
+
+protocol passDataBack{
+    func writeBack(name: String, pass: String)
+
 }
