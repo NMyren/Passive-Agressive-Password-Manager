@@ -10,11 +10,12 @@
 		3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D533C1AF3E0D600437053 /* LoginViewController.swift */; };
 		3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */; };
 		3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5E1AE6B66200EC36DF /* ViewController.swift */; };
-		3FA79E621AE6B66200EC36DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E601AE6B66200EC36DF /* Main.storyboard */; };
 		3FA79E641AE6B66200EC36DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E631AE6B66200EC36DF /* Images.xcassets */; };
 		3FA79E671AE6B66200EC36DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */; };
 		3FA79E731AE6B66200EC36DF /* Password_KeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E721AE6B66200EC36DF /* Password_KeeperTests.swift */; };
 		3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */; };
+		3FF2D3B01AF7D3CD004D513A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2D3AF1AF7D3CD004D513A /* RegisterViewController.swift */; };
+		3FF2D3B31AFBC6B9004D513A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF2D3B11AFBC6B9004D513A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,13 +34,14 @@
 		3FA79E5B1AE6B66200EC36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FA79E5E1AE6B66200EC36DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FA79E611AE6B66200EC36DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FA79E631AE6B66200EC36DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3FA79E661AE6B66200EC36DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3FA79E6C1AE6B66200EC36DF /* Password KeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Password KeeperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA79E711AE6B66200EC36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA79E721AE6B66200EC36DF /* Password_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Password_KeeperTests.swift; sourceTree = "<group>"; };
 		3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3FF2D3AF1AF7D3CD004D513A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3FF2D3B21AFBC6B9004D513A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 				3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */,
 				3FA79E5E1AE6B66200EC36DF /* ViewController.swift */,
 				3F2D533C1AF3E0D600437053 /* LoginViewController.swift */,
+				3FF2D3AF1AF7D3CD004D513A /* RegisterViewController.swift */,
+				3FF2D3B11AFBC6B9004D513A /* Main.storyboard */,
 				3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */,
-				3FA79E601AE6B66200EC36DF /* Main.storyboard */,
 				3FA79E631AE6B66200EC36DF /* Images.xcassets */,
 				3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */,
 				3FA79E5A1AE6B66200EC36DF /* Supporting Files */,
@@ -198,7 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FA79E621AE6B66200EC36DF /* Main.storyboard in Resources */,
+				3FF2D3B31AFBC6B9004D513A /* Main.storyboard in Resources */,
 				3FA79E671AE6B66200EC36DF /* LaunchScreen.xib in Resources */,
 				3FA79E641AE6B66200EC36DF /* Images.xcassets in Resources */,
 			);
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */,
+				3FF2D3B01AF7D3CD004D513A /* RegisterViewController.swift in Sources */,
 				3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */,
 				3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */,
 				3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */,
@@ -244,20 +248,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FA79E601AE6B66200EC36DF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FA79E611AE6B66200EC36DF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3FA79E661AE6B66200EC36DF /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		3FF2D3B11AFBC6B9004D513A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FF2D3B21AFBC6B9004D513A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
