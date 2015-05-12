@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController
 {
+    var oldPassword : String!
     
     @IBOutlet var usernameTextfield: UITextField!
     
@@ -18,7 +19,11 @@ class RegisterViewController: UIViewController
     var delegate: passDataBack?
     
     override func viewDidLoad()
+        
     {
+        usernameTextfield.backgroundColor = UIColor.blackColor()
+        passwordTextfield.backgroundColor = UIColor.blackColor()
+        self.view.backgroundColor = UIColor.darkGrayColor()
         super.viewDidLoad()
 
        

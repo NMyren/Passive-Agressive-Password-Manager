@@ -27,7 +27,7 @@ class DetailViewController: UIViewController
         var nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.orangeColor()
-        super.view.backgroundColor = UIColor.grayColor()
+        super.view.backgroundColor = UIColor.darkGrayColor()
         websiteLabel.textColor = UIColor.orangeColor()
         usernameLabel.textColor = UIColor.orangeColor()
         passwordLabel.textColor = UIColor.orangeColor()
