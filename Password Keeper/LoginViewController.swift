@@ -20,7 +20,7 @@ class LoginViewController: UIViewController, passDataBack
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        println(newUsername)
+        
        
         
     }
@@ -38,9 +38,9 @@ class LoginViewController: UIViewController, passDataBack
     
     func writeBack(name: String, pass: String)
     {
-        newUsername = name
-        newPassword = pass
-        println(newUsername)
+        username = name
+        password = pass
+      
     }
    
 }

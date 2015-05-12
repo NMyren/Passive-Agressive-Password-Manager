@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D533C1AF3E0D600437053 /* LoginViewController.swift */; };
+		3F4C85301AFD199F00B3CD38 /* PasswordRater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C852F1AFD199F00B3CD38 /* PasswordRater.swift */; };
+		3F4C85321AFD19F900B3CD38 /* PasswordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4C85311AFD19F900B3CD38 /* PasswordList.swift */; };
 		3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */; };
 		3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA79E5E1AE6B66200EC36DF /* ViewController.swift */; };
 		3FA79E641AE6B66200EC36DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA79E631AE6B66200EC36DF /* Images.xcassets */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		3F2D533C1AF3E0D600437053 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F4C852F1AFD199F00B3CD38 /* PasswordRater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRater.swift; sourceTree = "<group>"; };
+		3F4C85311AFD19F900B3CD38 /* PasswordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordList.swift; sourceTree = "<group>"; };
 		3FA79E571AE6B66200EC36DF /* Password Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Password Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA79E5B1AE6B66200EC36DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,10 +89,12 @@
 			children = (
 				3FA79E5C1AE6B66200EC36DF /* AppDelegate.swift */,
 				3FA79E5E1AE6B66200EC36DF /* ViewController.swift */,
+				3F4C852F1AFD199F00B3CD38 /* PasswordRater.swift */,
 				3F2D533C1AF3E0D600437053 /* LoginViewController.swift */,
 				3FF2D3AF1AF7D3CD004D513A /* RegisterViewController.swift */,
-				3FF2D3B11AFBC6B9004D513A /* Main.storyboard */,
+				3F4C85311AFD19F900B3CD38 /* PasswordList.swift */,
 				3FEE06711AEAA9E600FE4110 /* DetailViewController.swift */,
+				3FF2D3B11AFBC6B9004D513A /* Main.storyboard */,
 				3FA79E631AE6B66200EC36DF /* Images.xcassets */,
 				3FA79E651AE6B66200EC36DF /* LaunchScreen.xib */,
 				3FA79E5A1AE6B66200EC36DF /* Supporting Files */,
@@ -222,10 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2D533D1AF3E0D600437053 /* LoginViewController.swift in Sources */,
+				3F4C85301AFD199F00B3CD38 /* PasswordRater.swift in Sources */,
 				3FF2D3B01AF7D3CD004D513A /* RegisterViewController.swift in Sources */,
 				3FEE06721AEAA9E600FE4110 /* DetailViewController.swift in Sources */,
 				3FA79E5F1AE6B66200EC36DF /* ViewController.swift in Sources */,
 				3FA79E5D1AE6B66200EC36DF /* AppDelegate.swift in Sources */,
+				3F4C85321AFD19F900B3CD38 /* PasswordList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
