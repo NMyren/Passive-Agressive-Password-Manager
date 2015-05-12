@@ -19,6 +19,11 @@ class LoginViewController: UIViewController, passDataBack
     @IBOutlet var userTextField: UITextField!
     override func viewDidLoad()
     {
+        self.view.backgroundColor = UIColor.darkGrayColor()
+        passTextField.backgroundColor = UIColor.blackColor()
+        var nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.Black
+        nav?.tintColor = UIColor.orangeColor()
         super.viewDidLoad()
         
        
@@ -33,7 +38,7 @@ class LoginViewController: UIViewController, passDataBack
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var secondVC = (segue.destinationViewController as RegisterViewController)
         secondVC.delegate = self
-        
+        secondVC.oldPassword = password
     }
     
     func writeBack(name: String, pass: String)

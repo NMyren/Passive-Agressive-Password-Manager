@@ -27,13 +27,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         nav?.tintColor = UIColor.orangeColor()
         super.viewDidLoad()
         
-
+        
         self.performSegueWithIdentifier("login", sender: self)
         
 
         
         tableView.separatorColor = UIColor.blackColor()
-        tableView.backgroundColor = UIColor.grayColor()
+        tableView.backgroundColor = UIColor.darkGrayColor()
         editButton.tag = 0
         
         let filemgr = NSFileManager.defaultManager()
@@ -118,7 +118,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.textLabel?.text = websites[indexPath.row][0]
         cell.textLabel?.font = UIFont.systemFontOfSize(20.0)
         cell.textLabel?.textColor = UIColor.orangeColor()
-        cell.backgroundColor = UIColor.grayColor()
+        cell.backgroundColor = UIColor.darkGrayColor()
         
         return cell
     }
