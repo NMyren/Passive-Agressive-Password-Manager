@@ -8,49 +8,99 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, passDataBack
+class LoginViewController: UIViewController, passDataBack, UITextFieldDelegate
 {
-    var username: String!
-    var password: String!
-    var newUsername : String!
-    var newPassword : String!
+  
+    var password: String? = nil
+    var newPassword: String? = nil
     
     @IBOutlet var passTextField: UITextField!
-    @IBOutlet var userTextField: UITextField!
+
+    
     override func viewDidLoad()
     {
+        getPassword()
+        passTextField.delegate = self
         self.view.backgroundColor = UIColor.darkGrayColor()
         passTextField.backgroundColor = UIColor.blackColor()
         var nav = self.navigationController?.navigationBar
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.orangeColor()
+ 
         super.viewDidLoad()
-        
+
        
         
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func savePassword ()
+    {
+   
+        NSUserDefaults.standardUserDefaults().setObject(password, forKey: "password")
+    }
+   
+    func getPassword() {
+        self.password = NSUserDefaults.standardUserDefaults().objectForKey("password") as? String
+    
+    }
+   
+    
     @IBAction func Login(sender: AnyObject)
     {
-        self.dismissViewControllerAnimated(true, completion: nil)
+
+        if (newPassword == nil)
+        {
+          getPassword()
+
+        }
+        else
+        {
+            password = newPassword!
+            savePassword()
+            newPassword = nil
+        }
+        
+        if (password != nil)
+        {
+            if (passTextField.text == password)
+            {
+                savePassword()
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+        else
+        {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+
+       
     }
 
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var secondVC = (segue.destinationViewController as RegisterViewController)
         secondVC.delegate = self
-        secondVC.oldPassword = password
+        secondVC.oldPassword = password!
     }
     
-    func writeBack(name: String, pass: String)
+    func writeBack(pass: String)
     {
-        username = name
-        password = pass
-      
+        newPassword = pass
     }
    
 }
 
 protocol passDataBack{
-    func writeBack(name: String, pass: String)
+    
+    func writeBack(pass: String)
 
 }

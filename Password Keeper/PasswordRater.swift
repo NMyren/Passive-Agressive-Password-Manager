@@ -138,47 +138,47 @@ class PasswordRater: NSObject
     
     
     
-    func returnString( pass: String) -> String
+    func returnString( pass: String) -> [String]
     {
         
         var weakInsults = ["Really? This is pitiful", "Oh COME ON", "My eight-year old brother could crack this", "All your account are belong to us", "This'll keep a hacker busy for MAYBE a minute", "You're hopeless", "Hope this isn't for anything important", "Are you serious?", "This is not a password"]
         var badInsults = ["This is better than the baseline, but barely", "This'll keep a hacker busy for MAYBE an hour", "Please tell me this isn't your best", "Christ", "Honestly, I'm disappointed", "The NSA thanks you", "This is a password? Please", "Is this really your best?"]
         var acceptableInsults = ["This is a C-", "This'll keep a hacker busy for MAYBE a day", "You're getting there...finally","A for effort", "Not bad, for a 5 year old", "You're getting warmer", "I almost might consider using this", "Congrats on learning how to walk"]
-        var good = ["I'd use this for my weak accounts", "Well, you finally made it", "Good luck remembering this", "It's acceptable, I guess", "Fine. You can stop now"]
+        var good = ["I'd use this for my weak accounts", "Well, you finally made it", "Good luck remembering this", "It's acceptable, I guess", "Fine. You can stop now", "That's enough"]
         var lowerLetterOnlyInsults = ["REALLY? No numbers, symbols? Anything?", "Lowercase only? You're hopeless"]
         var numbersOnlyInsults = ["This is rediculous. NUMBERS ONLY?", "Do you have ANY IDEA how weak this is?", "Your neighborhood hacker thanks you for only using numbers"]
         var results = rate(pass)
         if results[3] == 1
         {
-            return weakInsults[0]
+            return ["f", weakInsults[0]]
         }
         else if (results[1] == 1 && results[0] != 3)
         {
-            return lowerLetterOnlyInsults[0]
+            return ["f", lowerLetterOnlyInsults[0]]
         }
         else if (results[2] == 1 && results[0] != 3)
         {
-            return numbersOnlyInsults[0]
+            return ["f", numbersOnlyInsults[0]]
         }
         else if (results[0] == 0)
         {
-            return weakInsults[0]
+            return ["f", numbersOnlyInsults[0]]
         }
         else if (results[0] == 1)
         {
-            return badInsults[0]
+            return ["d", badInsults[0]]
         }
         else if (results[0] == 2)
         {
-            return acceptableInsults[0]
+            return [ "c", acceptableInsults[0]]
         }
         else if (results[0] == 3)
         {
-            return good[0]
+            return ["a", good[0]]
         }
         else
         {
-            return ""
+            return [""]
         }
     }
  

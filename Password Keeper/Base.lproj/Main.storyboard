@@ -64,7 +64,7 @@
                     <connections>
                         <outlet property="editButton" destination="bg7-HT-cGK" id="J4D-ij-rwG"/>
                         <outlet property="tableView" destination="J4m-IB-sxB" id="BBs-du-3se"/>
-                        <segue destination="3wT-A8-Er8" kind="presentation" identifier="login" id="m1y-BU-vo2"/>
+                        <segue destination="Q7f-yR-A8g" kind="presentation" identifier="login" id="Ucc-5G-mcP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -107,7 +107,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Website" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFu-SP-KdQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFu-SP-KdQ">
                                 <rect key="frame" x="134" y="110" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gg7-d2-y9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2319.5" y="-387.5"/>
+            <point key="canvasLocation" x="2313.5" y="-357.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="46f-nb-nW4">
@@ -195,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Bt-Ia-IxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482.5" y="-1119.5"/>
+            <point key="canvasLocation" x="2632.5" y="-1112.5"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="4pS-HX-6xl">
@@ -216,7 +216,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWy-uu-WVc">
-                                <rect key="frame" x="160" y="445" width="78" height="45"/>
+                                <rect key="frame" x="160" y="354" width="78" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Change">
                                     <color key="titleColor" red="1" green="0.5160626089" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -238,13 +238,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ebu-gp-YmW">
-                                <rect key="frame" x="99" y="358" width="200" height="30"/>
+                                <rect key="frame" x="99" y="316" width="200" height="30"/>
                                 <color key="textColor" red="1" green="0.5160626089" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bw-8S-sCM">
-                                <rect key="frame" x="118" y="323" width="163" height="21"/>
+                                <rect key="frame" x="118" y="287" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.5160626089" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -254,13 +254,13 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="OldPassTextfield" destination="yVq-RR-25T" id="RCl-m7-uf9"/>
                         <outlet property="passwordTextfield" destination="ebu-gp-YmW" id="yp5-Vv-aZj"/>
-                        <outlet property="usernameTextfield" destination="yVq-RR-25T" id="gKc-Ix-BlO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptG-1R-x37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3020.5" y="-1119.5"/>
+            <point key="canvasLocation" x="3227.5" y="-1112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yop-bq-lUb">
@@ -279,26 +279,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Umh-qd-Qrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228.5" y="-387.5"/>
+            <point key="canvasLocation" x="1229.5" y="-328.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="rgo-2x-tC6">
+        <scene sceneID="zFS-FA-jwe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3wT-A8-Er8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q7f-yR-A8g" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GQm-ou-5Ww">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5yy-Yw-Djx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jYg-y4-wil" kind="relationship" relationship="rootViewController" id="g2g-ED-9UK"/>
+                        <segue destination="jYg-y4-wil" kind="relationship" relationship="rootViewController" id="ijD-n7-S0x"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-bd-ipc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzX-I2-LxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927.5" y="-1119.5"/>
+            <point key="canvasLocation" x="2076" y="-1112"/>
         </scene>
     </scenes>
 </document>

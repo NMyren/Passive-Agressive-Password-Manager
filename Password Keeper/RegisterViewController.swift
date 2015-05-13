@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController
+class RegisterViewController: UIViewController, UITextFieldDelegate
 {
-    var oldPassword : String!
+    var oldPassword : String?
     
-    @IBOutlet var usernameTextfield: UITextField!
+    @IBOutlet var OldPassTextfield: UITextField!
     
     @IBOutlet var passwordTextfield: UITextField!
     
@@ -21,18 +21,28 @@ class RegisterViewController: UIViewController
     override func viewDidLoad()
         
     {
-<<<<<<< HEAD
+        
 
-=======
-        usernameTextfield.backgroundColor = UIColor.blackColor()
+        OldPassTextfield.backgroundColor = UIColor.blackColor()
+        OldPassTextfield.delegate = self
         passwordTextfield.backgroundColor = UIColor.blackColor()
+        passwordTextfield.delegate = self
         self.view.backgroundColor = UIColor.darkGrayColor()
->>>>>>> origin/master
+
         super.viewDidLoad()
 
        
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -43,8 +53,12 @@ class RegisterViewController: UIViewController
 
     @IBAction func register(sender: AnyObject)
     {
-        delegate?.writeBack(usernameTextfield.text, pass: passwordTextfield.text)
+        
+        if OldPassTextfield.text == oldPassword!
+        {
+        delegate?.writeBack(passwordTextfield.text)
         self.navigationController?.popViewControllerAnimated(true)
+        }
     
     }
     

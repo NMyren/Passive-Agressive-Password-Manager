@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, sendBack
 {
 
     @IBOutlet var tableView: UITableView!
@@ -26,11 +26,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.orangeColor()
         super.viewDidLoad()
-        
-        
-        self.performSegueWithIdentifier("login", sender: self)
-        
-
         
         tableView.separatorColor = UIColor.blackColor()
         tableView.backgroundColor = UIColor.darkGrayColor()
@@ -51,8 +46,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 as [[String]]
             websites = dataArray
             
-            
         }
+               self.performSegueWithIdentifier("login", sender: self)
     }
     
     override func didReceiveMemoryWarning()
@@ -69,8 +64,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var dvc = segue.destinationViewController as DetailViewController
         
         var index = tableView.indexPathForSelectedRow()?.row
-        
         dvc.website = websites[index!]
+        dvc.index = index
+        dvc.delegate = self
         }
         
         
@@ -141,13 +137,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func addButton(sender: AnyObject)
     {
         
-        
-        
-        var alert = UIAlertController(title: "Add Website", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: "Add Password", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
         alert.view.tintColor = UIColor.grayColor()
         alert.addTextFieldWithConfigurationHandler
             {
-                (textField) -> Void in textField.placeholder = "Website"
+                (textField) -> Void in textField.placeholder = "Identifier"
         }
         alert.addTextFieldWithConfigurationHandler
             {
@@ -160,7 +154,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         alert.addAction(cancelAction)
         
-        var addAction = UIAlertAction(title: "Add Website", style: UIAlertActionStyle.Default)
+        var addAction = UIAlertAction(title: "Add Password", style: UIAlertActionStyle.Default)
             {
                 (action) -> Void in
                 var text1 = alert.textFields?[0] as UITextField
@@ -185,9 +179,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+   func writePasswordBack (array : [String], index : Int)
+   {
+    
+    websites[index] = array
+    tableView.reloadData()
+    saveInfo()
    
+    }
 
  
 
+}
+
+protocol sendBack
+{
+    func writePasswordBack (array : [String], index : Int)
+    
 }
 
