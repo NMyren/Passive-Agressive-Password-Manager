@@ -10,10 +10,8 @@ import UIKit
 
 class PasswordRater: NSObject
 {
-    var score : Int!
     var onlyNumbers = 0
     var onlyLowercase = 0
-    
     var symbols = ["!" :  "!", "@" :  "@", "#" :  "#", "$" :  "$", "%" :  "%", "^" :  "^", "&" :  "&", "*" :  "*", "(" :  "(", ")" :  ")", "_" :  "_", "-" :  "-", "+" :  "+", "=" :  "=", "[" :  "[", "{" :  "{", "]" :  "]", "}" :  "}", "\\" :  "\\", "|" :  "|", "," :  ",", "<" :  "<", "." :  ".", ">" :  ">", "/" :  "/", "?" :  "?", ";" :  ";", ":" :  ":", "`" :  "`", "~" :  "~", " " :  " ", "\"" :  "\"", "'" :  "'"]
     
     var lowerCase = ["a" :  "a", "b" :  "b", "c" :  "c", "d" :  "d", "e" :  "e", "f" :  "f", "g" :  "g", "h" :  "h", "i" :  "i", "j" :  "j", "k" :  "k", "l" :  "l", "m" :  "m", "n" :  "n", "o" :  "o", "p" :  "p", "q" :  "q", "r" :  "r", "s" :  "s", "t" :  "t", "u" :  "u", "v" :  "v", "w" :  "w", "x" :  "x", "y" :  "y", "z" :  "z"]
@@ -25,9 +23,10 @@ class PasswordRater: NSObject
 
     var weak = [""]
     
-    func analyze(string : String)
+    func analyze(string : String) -> [Int]
     {
-        
+
+        var localScore = 50
         var chars = Array(string)
         var excess = 3
         var upper = 4
@@ -71,56 +70,56 @@ class PasswordRater: NSObject
         
         if hasUppercase && hasSymbol && hasNumber && hasLowercase
         {
-            score = score! + 25
+            localScore = localScore + 25
         }
         else if (hasUppercase && hasSymbol) || (hasNumber && hasUppercase)
         {
-            score = score! + 15
+            localScore = localScore + 15
         }
         if (!hasUppercase && !hasNumber && !hasSymbol)
         {
-            score = score! - 15
+            localScore = localScore - 15
             onlyLowercase = 1
         }
         if (!hasUppercase && !hasLowercase && !hasSymbol)
         {
-            score = score! - 35
+            localScore = localScore - 35
             onlyNumbers = 1
-            
         }
-        score = score! + (excess * excessLength) + (numUpper * upper) + (numNum * number) + (numSymbol * symbol)
+        localScore = localScore + (excess * excessLength) + (numUpper * upper) + (numNum * number) + (numSymbol * symbol)
+        return [localScore]
     }
     
     func rate (str: String) -> [Int]
     {
  
         var password = str
-        var strengthRating = 0
-        var commonPass = 0
-        var length = countElements(password)
+        var strengthRating : Int = 0
+        var commonPass : Int = 0
+        var length : Int = countElements(password)
         if length < 8
         {
-            score = 0
             strengthRating = 0
 
         }
         else
         {
-            score = 50
-            analyze(password)
-            if (score < 50)
+            
+            var score = analyze(password)
+
+            if (score[0] < 50)
             {
                 strengthRating = 0
             }
-            else if (score >= 50 && score < 75)
+            else if (score[0] >= 50 && score[0] < 75)
             {
                 strengthRating = 1
             }
-            else if (score >= 75 && score < 100)
+            else if (score[0] >= 75 && score[0] < 100)
             {
                 strengthRating = 2
             }
-            else if (score >= 100)
+            else if (score[0] >= 100)
             {
                 strengthRating = 3
             }
@@ -131,7 +130,11 @@ class PasswordRater: NSObject
         {
             commonPass = 1
         }
-        var results = [strengthRating, onlyLowercase, onlyNumbers, commonPass]
+        var lower = onlyLowercase
+        var num = onlyNumbers
+        onlyLowercase = 0
+        onlyNumbers = 0
+        var results = [strengthRating, lower, num, commonPass]
         return results
 
     }
@@ -140,7 +143,7 @@ class PasswordRater: NSObject
     
     func returnString( pass: String) -> [String]
     {
-        
+      
         var weakInsults = ["Really? This is pitiful", "Oh COME ON", "My eight-year old brother could crack this", "All your account are belong to us", "This'll keep a hacker busy for MAYBE a minute", "You're hopeless", "Hope this isn't for anything important", "Are you serious?", "This is not a password"]
         var badInsults = ["This is better than the baseline, but barely", "This'll keep a hacker busy for MAYBE an hour", "Please tell me this isn't your best", "Christ", "Honestly, I'm disappointed", "The NSA thanks you", "This is a password? Please", "Is this really your best?"]
         var acceptableInsults = ["This is a C-", "This'll keep a hacker busy for MAYBE a day", "You're getting there...finally","A for effort", "Not bad, for a 5 year old", "You're getting warmer", "I almost might consider using this", "Congrats on learning how to walk"]
@@ -150,31 +153,45 @@ class PasswordRater: NSObject
         var results = rate(pass)
         if results[3] == 1
         {
-            return ["f", weakInsults[0]]
+            var size = weakInsults.count
+             var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["f", weakInsults[rand]]
         }
         else if (results[1] == 1 && results[0] != 3)
         {
-            return ["f", lowerLetterOnlyInsults[0]]
+            var size: Int = lowerLetterOnlyInsults.count
+            var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["f", lowerLetterOnlyInsults[rand]]
         }
         else if (results[2] == 1 && results[0] != 3)
         {
-            return ["f", numbersOnlyInsults[0]]
+            var size = numbersOnlyInsults.count
+             var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["f", numbersOnlyInsults[rand]]
         }
         else if (results[0] == 0)
         {
-            return ["f", numbersOnlyInsults[0]]
+            var size = weakInsults.count
+            var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["f", weakInsults[rand]]
         }
         else if (results[0] == 1)
         {
-            return ["d", badInsults[0]]
+            var size = badInsults.count
+            var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["d", badInsults[rand]]
         }
         else if (results[0] == 2)
         {
-            return [ "c", acceptableInsults[0]]
+            var size = acceptableInsults.count
+            var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return [ "c", acceptableInsults[rand]]
         }
         else if (results[0] == 3)
         {
-            return ["a", good[0]]
+            var size = good.count
+             var rand = (Int)(arc4random_uniform(UInt32(size)))
+            return ["a", good[rand]]
         }
         else
         {

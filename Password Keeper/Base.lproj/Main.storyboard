@@ -102,7 +102,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="era-3P-u4g">
-                                <rect key="frame" x="134" y="218" width="107" height="21"/>
+                                <rect key="frame" x="134" y="236" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -119,23 +119,36 @@
                                 <color key="textColor" red="1" green="0.5160626089" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o8L-nR-nDP">
+                                <rect key="frame" x="71" y="406" width="232" height="11"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgS-xE-t1e">
+                                <rect key="frame" x="57" y="378" width="260" height="156"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5J-72-ntq">
-                                <rect key="frame" x="134" y="315" width="107" height="21"/>
+                                <rect key="frame" x="134" y="332" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ehr-x3-1yK" secondAttribute="centerX" id="Hy6-rA-uxY"/>
                             <constraint firstAttribute="centerX" secondItem="gBu-gI-JSy" secondAttribute="centerX" id="J5L-gf-hAD"/>
+                            <constraint firstAttribute="centerX" secondItem="o8L-nR-nDP" secondAttribute="centerX" id="Sdc-EP-UrF"/>
                             <constraint firstAttribute="centerX" secondItem="lZD-2b-qwe" secondAttribute="centerX" id="WTW-1A-fgR"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="insultLabel" destination="bgS-xE-t1e" id="Vr2-FH-LEK"/>
                         <outlet property="passwordLabel" destination="lZD-2b-qwe" id="APt-NE-hqn"/>
+                        <outlet property="strengthView" destination="o8L-nR-nDP" id="UkK-EB-FM8"/>
                         <outlet property="usernameLabel" destination="gBu-gI-JSy" id="Ar6-LP-QNW"/>
                         <outlet property="websiteLabel" destination="ehr-x3-1yK" id="mG0-AN-6zh"/>
                     </connections>
